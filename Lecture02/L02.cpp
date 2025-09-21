@@ -7,5 +7,6 @@ int main() {
     cout << "Введите имя: ";
     cin >> firstName;
     cout << "Hello " << firstName << endl;
+    cerr << "firstname" << firstName << endl;
     return 0;
 }
