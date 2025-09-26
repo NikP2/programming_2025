@@ -5,12 +5,18 @@ using namespace std;
 
 int main() {
     const float num = 13.1415f; //создание float переменной
-    double V, S, r; //созданиеи числа с плавующей точкой с помощью double
+    double V, S; //созданиеи числа с плавующей точкой с помощью double
+    int r;
     cin >> r; //input
     V = pow(r, 3) * (4.0 / 3.0) * num;  //вычислить объём сферы
     S = 4 * num * pow(r, 2); //вычислить площадь поверхности сферы
     cout << "Объём сферы: " << V << " double" << "\n" << "Площадь поверхности сферы: " << S << " double" << endl; // вывод переменных
-    cout <<"float "<< "32 бита, " << -3.4E+38 <<  3.4E+38 << endl;
-    cout <<"double "<< "64 бита, " << -1.7E-308 << 1.7E-308 << endl;
+    cout <<"float "<< sizeof(float) * 8 << " бита, " << -numeric_limits<float>::min()  << " " <<  numeric_limits<float>::max()  << endl;
+    cout <<"double "<< sizeof(double) * 8 << " бита, " << numeric_limits<double>::min() << " " << numeric_limits<double>::max()  << endl;
+    cout <<"int "<< sizeof(int) * 8 << " бита, " << numeric_limits<int>::min() << " " << numeric_limits<int>::max() << endl;
     return 0;
 }
+
+/*Hello
+world
+! */
