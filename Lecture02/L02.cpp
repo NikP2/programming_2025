@@ -4,8 +4,7 @@ using namespace std;
 
 // Number 1
 
-/*int main() {
-int B, C;
+int main() {
 short A, i;
 cout << "Число i: ";
 cin >> i;
@@ -23,7 +22,8 @@ cout << "Двоичное представление числа A: " << b2.to_st
 bool iBit = (A >> i) & 1;
 cout << "i бит A: "<< iBit << endl;
 
-  if (iBit) {
+  if (iBit != 0) {
+    int B, C;
     cout << "Число B: ";
     cin >> B;
     cout << "Число C: ";
@@ -39,14 +39,14 @@ cout << "i бит A: "<< iBit << endl;
     }
   }
   else {
-    cout << (A << 1) << endl;
+    cout << (A | A) << endl;
   }
   return 0;
-} */
+}
 
 // Number 2
 
-/*int main() {
+int main() {
 int n;
 cout << "Введите номер месяца: ";
 cin >> n;
@@ -100,4 +100,4 @@ switch (n)
     cout << "Такого месяца нет!" << endl;
     break;
   }
-} */
+}
