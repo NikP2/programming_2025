@@ -1,6 +1,6 @@
 //Number 1
 
-/*#include <iostream>
+#include <iostream>
 using namespace std;
 
 
@@ -38,11 +38,11 @@ int main() {
             cout << "Отрицательных чисел нет" << endl;
         }
         return 0;
-    } */
+    } 
 
 // Number 2
 
-/*#include <iostream>
+#include <iostream>
 using namespace std;
 
 
@@ -68,4 +68,4 @@ int main() {
        cout << "Не коректное число!" << endl; 
     }
     return 0;
-} */
+}
