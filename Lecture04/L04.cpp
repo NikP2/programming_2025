@@ -48,31 +48,31 @@ int main() {
             cin >> matrix[i][j];
         }
     }
-// ищем номер строки с наибольшим кол-во отриц значений
+// ищем номер столбца с наибольшим кол-во отриц значений
     int mx_cnt = 0;
     int mx_col = -1;
-    for(int i1 = 0; i1 < y; ++i1) {
+    for(int i = 0; i < y; ++i) {
         int cnt = 0;
-        for(int j1 = 0; j1 < x; ++j1) {
-            if (matrix[j1][i1] < 0) {
+        for(int j = 0; j < x; ++j) {
+            if (matrix[j][i] < 0) {
                 ++cnt;
             }
         }
         if (cnt > mx_cnt) {
             mx_cnt = cnt;
-            mx_col = i1;
+            mx_col = i;
         }
     }
 //Делаем замену элементов столбца на -1 (по усл)
     if (mx_col != -1) {
-        for(int j2 = 0; j2 < x; ++j2) {
-            matrix[j2][mx_col] = -1; 
+        for(int j = 0; j < x; ++j) {
+            matrix[j][mx_col] = -1; 
         }
     }
 // выводим матрицу
-    for(int i3 = 0; i3 < x;++i3) {
-        for (int j3 = 0; j3 < y; ++j3) {
-            cout << matrix[i3][j3] << " ";
+    for(int i = 0; i < x;++i) {
+        for (int j = 0; j < y; ++j) {
+            cout << matrix[i][j] << " ";
         }
         cout << endl;
     }
