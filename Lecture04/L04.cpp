@@ -1,11 +1,12 @@
 //В пункте 1, размер массива равен №варианта + 3.
-// 1.Упорядочить массив по возрастанию, <u>если все числа</u> кратны 5.
+// 1.Упорядочить массив по возрастанию, если все числа кратны 5.
 
 #include <iostream>
 using namespace std;
 
 int main() {
     int x[7];
+    bool fl = false;
     for (int b = 0; b < 7; ++b) {
         int num;
         cout << "Введите число №" << b + 1 << ": ";
@@ -14,19 +15,23 @@ int main() {
             x[b] = num;
         }
         else {
-            cout << "Не все числа кратны 5!"<< endl;
-            return 0;
+            fl = true;
         }
     }
-    for (int i = 0;i < 6;++i) {
-        for (int j = i + 1;j < 7;++j) {
-            if (x[i] > x[j]) {
-                swap(x[i], x[j]);
+    if (fl == false) {
+        for (int i = 0;i < 6;++i) {
+            for (int j = i + 1;j < 7;++j) {
+                if (x[i] > x[j]) {
+                    swap(x[i], x[j]);
+                }
             }
         }
+        for (int q = 0; q < 7; ++q) {
+            cout << x[q] << " ";
+        }
     }
-    for (int q = 0; q < 7; ++q) {
-        cout << x[q] << " ";
+    else {
+        cout << "Массив содержит числа не кратные 5!" << endl;
     }
     return 0;
 }
