@@ -92,7 +92,7 @@ int main() {
  }
 
 
-//Второй способ!
+//План Б (целые числа)
 
 #include <iostream>
 #include <limits>
