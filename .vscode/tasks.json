@@ -38,6 +38,13 @@
       "problemMatcher": ["$gcc"],
       "group": "build",
       "detail": "компилятор: C:\\msys64\\ucrt64\\bin\\g++.exe"
+    },
+    {
+      "type": "cmake",
+      "label": "CMake: настроить",
+      "command": "configure",
+      "problemMatcher": [],
+      "detail": "Задача шаблона CMake настроить"
     }
   ],
   "version": "2.0.0"
