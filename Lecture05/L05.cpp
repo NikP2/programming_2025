@@ -17,8 +17,8 @@ void L01() {
     cout <<"int "<< sizeof(int) * 8 << " бита, " << numeric_limits<int>::min() << " " << numeric_limits<int>::max() << endl;
 }
 
-int MediumAbs(int x[3]) {
-    int s[3] = {abs(x[0]), abs(x[1]), abs(x[2])};
+int MediumAbs(int a, int b, int c) {
+    int s[3] = {abs(a), abs(b), abs(c)};
     int mx = max(s[0], max(s[1], s[2]));
     int mn = min(s[0], min(s[1], s[2]));
     int su = 0;
@@ -29,7 +29,7 @@ int MediumAbs(int x[3]) {
 }
 
 
-int MinOfTwo (int a, int b) {
+int MediumAbs (int a, int b) {
     return min(abs(a), abs(b));
 }
 
@@ -61,10 +61,10 @@ void ControlMain(int x[3]) {
         }
     }
     if (vec.size() == 3) {
-        cout << "Для трёх чисел – среднее по модулю: " << MediumAbs(x) << endl;
+        cout << "Для трёх чисел – среднее по модулю: " << MediumAbs(vec[0], vec[1], vec[2]) << endl;
     }
     else if (vec.size() == 2) {
-        cout << "Для двух чисел - минимальное число: " << MinOfTwo(vec[0], vec[1]) << endl;
+        cout << "Для двух чисел - минимальное число: " << MediumAbs(vec[0], vec[1]) << endl;
     }
     else if (vec.size() == 1) {
         cout << "У меня в списке всего одно натуральное число из 3-х: " << vec[0] << endl;
