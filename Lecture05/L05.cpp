@@ -3,12 +3,9 @@
 #include <vector>
 using namespace std;
 
-void L01() {
+void L01(int r) {
     const float num = 13.1415f; //создание float переменной
-    double V, S; //созданиеи числа с плавующей точкой с помощью double
-    cout << "Введите радиус сферы: ";
-    int r;
-    cin >> r; //input
+    double V, S;
     V = pow(r, 3) * (4.0 / 3.0) * num;  //вычислить объём сферы
     S = 4 * num * pow(r, 2); //вычислить площадь поверхности сферы
     cout << "Объём сферы: " << V << " double" << "\n" << "Площадь поверхности сферы: " << S << " double" << endl; // вывод переменных
@@ -29,11 +26,11 @@ int MediumAbs(int a, int b, int c) {
 }
 
 
-int MediumAbs (int a, int b) {
+int MediumAbs(int a, int b) {
     return min(abs(a), abs(b));
 }
 
-int NumberOfMaxNumbers(int n) {
+int MediumAbs(int n) {
     int mx = numeric_limits<int>::min();
     int col = 0;
     int copyN = abs(n);
@@ -67,7 +64,7 @@ void ControlMain(int x[3]) {
         cout << "Для двух чисел - минимальное число: " << MediumAbs(vec[0], vec[1]) << endl;
     }
     else if (vec.size() == 1) {
-        cout << "У меня в списке всего одно натуральное число из 3-х: " << vec[0] << endl;
+        cout << "Максимальная цифра повторяется: " << MediumAbs(vec[0]) << endl;
     }
     else {
         cout << "К сожалению я 0 не считаю :(" << endl;
@@ -81,11 +78,6 @@ int main() {
     if (answer == 1) {
         int a;
         int x[3];
-        cout << "Введите своё число для нахождения повторений максимальной цифры: ";
-        cin >> a;
-        cout << "Максимальная цифра повторяется: " << NumberOfMaxNumbers(a) << endl;   
-        
-        cout << "А теперь мы выведем среднее по модулю среди 3-х чисел!" << endl;
         for(int i = 0; i != 3; ++i) {
             cout << "Число по счёту #" << i + 1 << ": "; 
             cin >> x[i];
@@ -93,7 +85,10 @@ int main() {
         ControlMain(x);
     }
     else if (answer == 2) {
-        L01();
+        cout << "Введите радиус сферы: ";
+        int r;
+        cin >> r; //input
+        L01(r);
     }
     else {
         cout << "Такой команды нет!" << endl;
