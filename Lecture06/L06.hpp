@@ -1,5 +1,6 @@
 #pragma once
 
-namespace np {
-    int UsualNum(int n);
+namespace mt {
+    extern int n; //создаёт по сути global premium переменную, которая распространяет своё влияние на другие файлы
+    void foo();
 }

@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
 
-set(PROJECT_NAME Lecture05)
+set(PROJECT_NAME Lecture06)
 project("${PROJECT_NAME}")
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable("${PROJECT_NAME}" L06.cpp L06_main.cpp)
+add_executable("${PROJECT_NAME}" L06.cpp)
