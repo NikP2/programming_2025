@@ -1,6 +1,6 @@
 // ПУНКТ 1
 
-/* #include <iostream>
+#include <iostream>
 #include <vector>
 #include <climits>
 
@@ -118,12 +118,12 @@ int main(){
         }
     }
     return 0;
-} */
+}
 
 
 // ПУНКТ 2
 
-/* #include <iostream>
+#include <iostream>
 #include <array>
 
 void value(std::array<int, 10> arr) {
@@ -268,15 +268,14 @@ int main() {
     std::cout << "ПО УКАЗАТЕЛЮ: " << '\n';
     std::array<int, 10> copy_arr = arr;
     pointer(&copy_arr);
-    std::cout << "ПО ЗНАЧЕНИЮ: " << '\n'; // Работает с копией, не меняет оригинал
+    std::cout << "ПО ЗНАЧЕНИЮ: " << '\n';
     value(arr);
-    std::cout << "ПО ССЫЛКЕ: " << '\n'; // Работает с оригиналом, меняет его!
+    std::cout << "ПО ССЫЛКЕ: " << '\n';
     link(arr);
 
 
     return 0;
 }
-    */
 
 /* Передача массива в функцию по ЗНАЧЕНИЮ:
 
